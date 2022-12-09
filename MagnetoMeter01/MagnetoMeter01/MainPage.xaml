@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MagnetoMeter01.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,10"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout 
+                Spacing="25"
+                Padding="20,20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Label Text="자기장 값 :" VerticalTextAlignment="Start"/>
+                <Editor IsReadOnly="True" x:Name="valueMagnetic" 
+                        VerticalTextAlignment="Start" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="25"
+                Padding="20,20"
+                HorizontalOptions="Center">
+                <Button Text="측정시작" x:Name="StartMeasure" IsEnabled="True"
+                        Clicked="StartMeasure_Clicked"/>
+                <Button Text="측정정지" x:Name="StopMeasure" IsEnabled="False"
+                        Clicked="StopMeasure_Clicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

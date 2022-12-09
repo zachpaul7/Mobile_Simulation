@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorseCode.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="글자 입력(영어,한글,숫자만)"
+                x:Name="morseLabel"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <Editor
+                x:Name="morseData"
+                AutoSize="TextChanges"
+                BackgroundColor="Aqua"></Editor>
+
+            <Label
+                Text=""
+                x:Name="encodeLabel"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text=""
+                ></Label>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="CodeBtn"
+                    Text="Morse to Vibrate"
+                    SemanticProperties.Hint=""
+                    Clicked="CodeBtn_Clicked"
+                    HorizontalOptions="Center" />
+
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

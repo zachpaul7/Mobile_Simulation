@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MagneticSensor02.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <HorizontalStackLayout
+                Spacing="25"
+                Padding="10,10"
+                HorizontalOptions="Center">
+                <Label Text="자기장 값 :" />
+                <Editor x:Name="valueMagnet" IsEnabled="False"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="25"
+                Padding="10,10"
+                HorizontalOptions="Center">
+                <Button x:Name="StartMeasure" Text="측정시작" IsEnabled="True" 
+                        Clicked="StartMeasure_Clicked" />
+                <Button x:Name="StopMeasure" Text="측정중지" IsEnabled="False"
+                        Clicked="StopMeasure_Clicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <Label
+                
+                Text="Hello"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="16"
+                HorizontalOptions="Center" />
+            
+            <Label
+                x:Name="AccLabel"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="AvgLabel"
+                Text=""
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="MagLabel"
+                Text=""
+                SemanticProperties.HeadingLevel="Level5"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Editor
+                x:Name="numData"
+                BackgroundColor="LightYellow"
+                />
+
+            <Button
+                x:Name="StartAcc"
+                Text="Start Accelermeter"
+                SemanticProperties.Hint="Start accelerometer"
+                Clicked="StartAcc_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="StopAcc"
+                Text="Stop Accelermeter"
+                SemanticProperties.Hint="Stop accelerometer"
+                Clicked="StopAcc_Clicked"
+                HorizontalOptions="Center" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

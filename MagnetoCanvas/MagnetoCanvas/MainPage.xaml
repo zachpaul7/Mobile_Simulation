@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:MagnetoCanvas"
+             xmlns:datadraw="clr-namespace:MagnetoCanvas"
+             x:Class="MagnetoCanvas.MainPage">
+    <ContentPage.Resources>
+        <drawable:GraphicsDrawable x:Key="drawable"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="30"
+            Padding="20,0"
+            VerticalOptions="Center">
+
+            <datadraw:DataGraphicsView
+                x:Name="myCanvas"
+                HeightRequest="300"
+                WidthRequest="400"/>
+
+            <HorizontalStackLayout>
+
+                <Button
+                    Text="Click to Start Measure!"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    x:Name="StartButton"
+                    IsEnabled="true"
+                    Clicked="Start_Button_Clicked"/>
+
+                <Button
+                    Text="Click to Stop Measure!"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    x:Name="StopButton"
+                    IsEnabled="false"
+                    Clicked="Stop_Button_Clicked"/>
+
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
